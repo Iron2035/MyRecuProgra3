@@ -1,0 +1,250 @@
+
+:root {
+    --color-primario: firebrick;      
+    --gris-oscuro: #dddddd;          
+    --gris-claro: #fbfbfb;         
+    --color-secundario: #fbeaea;    
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+    background-color: #ffffff;
+}
+
+
+footer {
+    padding: 14px 24px;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid var(--gris-oscuro);
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+footer {
+    border-top: 1px solid var(--gris-oscuro);
+    margin-top: 24px;
+}
+
+
+main {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+}
+
+.catalogo {
+    flex: 1;
+}
+
+/* Título Burger House a la izquierda, contador a la derecha */
+.titulo-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#titulo-burger {
+    font-size: 22px;
+    cursor: pointer;   /* aviso visual de que se puede clickear */
+}
+
+#cart-count {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+hr {
+    border: none;
+    border-top: 1px solid var(--gris-oscuro);
+    margin-bottom: 12px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.filtros-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.categorias {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.categorias label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: var(--color-primario);
+}
+
+#orden {
+    width: 170px;
+    padding: 4px;
+    font-size: 13px;
+}
+
+.barra-busqueda {
+    width: 260px;
+    padding: 7px 10px;
+    border: 1px solid var(--gris-oscuro);
+    font-size: 13px;
+}
+
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.card-producto {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+
+.card-producto:hover {
+    background-color: var(--color-secundario);
+}
+
+.card-producto img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.card-producto h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.card-producto .descripcion {
+    font-size: 11px;
+    color: #666666;
+    margin-bottom: 6px;
+}
+
+/* Precio en color primario */
+.card-producto .precio {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+
+.card-producto button {
+    margin-top: auto;   
+    padding: 7px;
+    border: none;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    font-size: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.card-producto button:disabled {
+    background-color: #dddddd;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+.sin-resultados {
+    grid-column: 1 / -1;
+    padding: 20px;
+    text-align: center;
+    color: #666666;
+}
+
+
+.carrito {
+    width: 230px;
+    padding: 12px;
+    border: 1px solid var(--gris-oscuro);
+    background-color: var(--gris-claro);
+}
+
+.carrito h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+#cart-list {
+    list-style: none;
+    font-size: 12px;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+}
+
+#cart-list li button {
+    padding: 1px 6px;
+    border: 1px solid var(--color-primario);
+    background-color: #ffffff;
+    color: var(--color-primario);
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.carrito-vacio {
+    color: #666666;
+}
+
+.total {
+    margin: 12px 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#vaciar-carrito {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid var(--color-primario);
+    background-color: #ffffff;
+    color: var(--color-primario);
+    font-size: 11px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
